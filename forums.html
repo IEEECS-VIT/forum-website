@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+
+
+</head>
+<title>Forum</title>
+<body>
+	<style>
+	nav {
+		border-radius: 0;
+		padding-top:0;
+		padding-bottom:0; 
+	}
+		.sidenav {
+			padding-top:20px;
+			background-color: white;
+			height:100%;
+		}
+		.row.content{
+			height:450px;
+
+		}
+
+		}
+		.form-control {
+			width:300px;
+
+
+		}
+		.modal-dailog {
+			padding-top:10px;
+			border-radius:0;
+
+		}
+		.nav-stacked a:hover {
+			background-color:yellow;
+			font-family:Tahoma;
+
+
+		}
+		body {
+			background:url("http://www.codebook.in/dist/img/background.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		.footer p {
+			font-family: 'Raleway', sans-serif;
+			font-size: 15px;
+		}
+
+		footer {
+			background-color: black;
+			color: white;
+			padding: 15px;
+			box-shadow:0 0 24px rgba(0,0,0,255);
+
+		}
+		.panel-info {
+			box-shadow:0 0 24px rgba(0,0,0,255);
+
+		}
+		.footer {
+			margin-bottom:-100px;
+		}
+	.modal-header {
+		background-color: #333;
+	
+    color: #fff ;
+    text-align: center;
+    font-size: 30px;
+}
+ .modal-body {
+     color: #fff ;
+}
+.form-group button {
+	background-color:#333;
+	color: white;
+	border:2px solid black;
+	
+}
+.form-group button:hover {
+	background-color:white;
+	border:2px solid black;
+	color:#333;
+}
+label {
+	color:#333;
+}
+.container-fluid {
+	padding-top:40px;
+	padding-bottom: 10px;
+
+}
+.modal-footer button{
+	background-color:#333;
+	color: white;
+	border:2px solid black;
+	width:350px;
+}
+.modal-footer button:hover {
+	background-color:white;
+	border:2px solid black;
+	color:#333;
+
+}
+
+
+
+	</style>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand" style="font-size:30px;font-family:font-family: 'Raleway', sans-serif">Forums</a>
+			</div>
+			<form class="navbar-form navbar-left">
+				<div class="input-group">
+					<input type="text" placeholder="Search" class="form-control">
+					<span class="input-group-addon">
+						<span class="glyphicon glyphicon-search"></span>
+					</span>
+				</div>
+				<button class="btn btn-default navbar-btn" style="font-family:font-family: 'Raleway',sans-serif">Search</button>
+			</form>
+			<button class="navbar-btn btn btn-success navbar-right btn-sm" data-toggle="modal" href="#mymodal" style="margin-right:50px ;font-family: 'Raleway', sans-serif">Login</button>
+			<div class="modal fade" id="mymodal">
+				<div class="modal-dailog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title" style="font-family: 'Raleway',sans-serif ; text-align:center">Sign Up</h1>
+							<button class="close" data-dismiss="modal" > &times; </button>
+							
+						</div>
+						<div class="modal-body">
+
+							<div class="row">
+								<div class="col-sm-6">
+
+
+							<div class="form-group" >
+								<form class="form-horizontal" >
+									<h2 style="font-family: 'Raleway', sans-serif;color:black">Already a Member </h2>
+									<label style="font-family: 'Raleway', sans-serif">Email</label>
+									<input class="form-control" type="email" placeholder="Email" style="font-family: 'Raleway', sans-serif;width:300px"><br>
+									<label style="font-family: 'Raleway', sans-serif"> Password :</label>
+									<input class="form-control" type="password" placeholder="password" style="font-family: 'Raleway', sans-serif ;width:300px"><br>
+									<label style="font-family: 'Raleway', sans-serif">Remember Me</label> <input type="checkbox">
+									<p style="font-family: 'Raleway', sans-serif ;color:black" > Forgot Your <a href="#"><i> Password ?</i></a></p>
+ 									<button class="btn btn-default" type="submit" style="font-family: 'Raleway', sans-serif ;width:300px">Log in</button>
+								</form>
+								
+							</div>
+								</div>
+								<div class="col-sm-6" >
+									<div class="form-group">	
+										<h4 style="font-family: 'Raleway', sans-serif ;color:black">New Member ?</h4>
+										<br>
+										<br>
+
+										<form class="form-horizontal" style="margin-top:-10px ;margin-right:10px">
+											<input class="form-control" type="email" placeholder="Email" style="width:300px"><br>
+											<label style="font-family: 'Raleway', sans-serif">Username</label>
+											<input style="font-family: 'Raleway', sans-serif ;width:300px" type="text" placeholder="Username" class="form-control"><br>
+											<label style="font-family: 'Raleway', sans-serif">Registration number</label>
+											<input style="font-family: 'Raleway', sans-serif;width:300px" type="text" placeholder="Registration number" class="form-control"><br>
+											<label style="font-family: 'Raleway', sans-serif">Select Your Branch</label>
+											<br>
+											<select class="form-control" style="width:300px">
+												<option style="font-family: 'Raleway', sans-serif"><b>Select Branch</b></option>
+												<option style="font-family: 'Raleway', sans-serif">IT</option>
+												<option style="font-family: 'Raleway', sans-serif">CSE</option>
+												<option style="font-family: 'Raleway', sans-serif">BME</option>
+												<option style="font-family: 'Raleway', sans-serif">BBT</option>
+
+											</select>
+											<br>
+											<label style="font-family: 'Raleway', sans-serif ">Password</label>
+											<br>
+											<input type="password" class="form-control" placeholder="Password" style="width:300px"><br>
+											<button class="btn btn-info" type="submit" style="font-family: 'Raleway', sans-serif; width:300px">Sign Up</button>
+										</form>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-info center-block btn-lg" type="submit" style="font-family: 'Raleway', sans-serif">Submit<span class="glyphicon glyphicon-ok"></span></button>
+						</div>
+					</div>
+
+
+				</nav>
+				<div class="row content">
+					<div class="col-sm-2 sidenav">
+						<ul class="nav nav-pills nav-stacked">
+							<li><a href="#" style="font-family: 'Raleway', sans-serif,font-size:10px">  Profile   <span class="glyphicon glyphicon-user"></span></a></li><hr>
+							<li><a href="#" style="font-family: 'Raleway', sans-serif">Projects <span class="badge">New</span></a></li><hr>
+							<li><a href="#" style="font-family: 'Raleway', sans-serif">Forums </a></li>
+						</ul>
+					</div>
+
+
+
+					<div class="col-md-8 left-text">
+						<div class="panel panel-info">
+							<div class="panel-heading">
+								<h3><a href="#" style="font-family: 'Raleway', sans-serif">Recent Topics</a></h3>
+							</div>
+							<div class="panel-body">
+								<div class="list-group">
+									<a class="list-group-item" data-toggle="collapse" href="#mycollapse" style="font-family: 'Raleway', sans-serif">Website disclaimer for simple online game <span class="glyphicon glyphicon-chevron-right"></span></a>
+									<div class="panel-collapse collapsing" id="mycollapse">
+										<div class="list-group">
+											<a class="list-group-item">General : <br>
+												<div class="jumbotron">
+													<p class="list-group-item-text" style="font-family: 'Raleway', sans-serif;font-size:25px"> Gaming as we all know is loved by everyone so we have included a new<br>
+														Programme which includes gaming tutorials using Java online.<br>
+														Its New Technology and is userfriendly.</p> </a> </div>
+													</div>
+												</div>
+
+												<a href="#" class="list-group-item" style="font-family: 'Raleway', sans-serif"> How to configure mobile friendly page <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+												<a href="#" class="list-group-item active" style="font-family: 'Raleway', sans-serif"> Suggestions<span class="badge">New</span>
+													<p class="list-group-item-text" style="font-family: 'Raleway', sans-serif">How can we improve</p>
+												</a>
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row content">
+									<div class="col-sm-2 sidenav">
+										<div class="well">
+											ADD</div>
+											<div class="well">
+												ADD</div>
+												<div class="well">
+													ADD</div>
+												</div>
+											</div>
+
+
+										</div>
+
+										<div class="container-fluid text-center">
+										<div class="col-sm-12">
+											<div class="footer">
+												<div  style="width:100%">
+													<footer > <p style="taxt-align:center"><span class="glyphicon glyphicon-copyright-mark"></span> Copyrights: Anish Singh Walia</p> 
+													</footer>
+												</div>
+											</div>
+										</div>
+										</div>
+
+
+									</body>
+
+									</html>
