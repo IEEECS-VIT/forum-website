@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='https://cdn.tinymce.com/4/tinymce.min.js'></script>
+  <script type="text/javascript">
+  tinymce.init({
+    selector: '#myTextarea',
+    theme: 'modern',   
+    // skin: 'custom',
+    width: 800,
+    height: 100,
+    browser_spellcheck: true,
+    plugins: [
+      'advlist autolink link image lists pagebreak spellchecker',
+      'searchreplace wordcount insertdatetime media',
+      'save directionality emoticons table paste imagetools'
+    ],
+    toolbar: 'insertfile undo redo | bold italic | alignleft aligncenter alignright align justify | bullist numlist outdent indent | link image |preview media | table emoticons',
+    menubar: true,
+  min_height: 35,
+  min_width: 300,
+  menubar: false
+  });
+  </script>
+</head>
+
+<body>
+  <textarea id="myTextarea"></textarea>
+</body>
+</html>
