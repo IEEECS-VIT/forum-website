@@ -13,14 +13,23 @@ router.get('/',function(req,res){
 });
 
 router.post('/login',function(req,res){
-  
+  var mailFormat = /([a-z])+.(([a-z])+)?201[0-9]{1}@vit.ac.in/i;
+  var pwd = 'Hi';
+  if(req.body.email.match(mailFormat) && req.body.pass===pwd){
+    res.json({message: "Logged In"});
+  } else{
+    res.json({message: "Invalid Username or Password"})
+  }
 });
 
 router.post('/register',function(req,res){
-  if(true){
-    res.json({name: req.body.name,pass: req.body.pass,email: req.body.email,reg: req.body.regnum,branch: req.body.branch});
+  var mailFormat = /([a-z])+.(([a-z])+)?201[0-9]{1}@vit.ac.in/i;
+  var regNoFormat = /1[0-9][A-Z]{3}[0-9]{4}/i;
+  var uNameFormat = /[a-z_.0-9]{6,}/i;
+  if(req.body.email.match(mailFormat) && req.body.reg.match(regNoFormat) && req.body.name.match(uNameFormat)){
+    res.json({name: req.body.name,email: req.body.email,regNum: req.body.reg,pass: req.body.pass});
   } else{
-    res.json({staus: "failure"});
+    res.json({message: "User Creation Failed"});
   }
 });
 
