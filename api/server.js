@@ -28,7 +28,11 @@ router.post('/login',function(req,res){
 });
 
 router.post('/register',function(req,res){
-  
+  if(true){
+    res.json({name: req.body.name,pass: req.body.pass,email: req.body.email,reg: req.body.regnum,branch: req.body.branch});
+  } else{
+    res.json({staus: "failure"});
+  }
 });
 
 app.use('/api',router);
