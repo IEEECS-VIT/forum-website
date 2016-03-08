@@ -13,18 +13,7 @@ router.get('/',function(req,res){
 });
 
 router.post('/login',function(req,res){
-  var name = "vishwajeet";
-  var pwd = "vishwajeet";
-  /*if(email.match("\.4[0-9][$@vit.ac.in]")){
-    res.json({message: "Email OK"});
-  } else{
-    res.json({message: "Email Error"});
-  }*/
-  if(req.body.name===name && req.body.pass===pwd)
-    res.json({message: "Successfully Logged in"});
-  else {
-      res.json({message: "Invalid Username or Password"});
-  }
+  
 });
 
 router.post('/register',function(req,res){
