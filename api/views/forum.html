@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<head>
+<title>Report Box</title>
+<style>
+body{
+background-image:url('http://www.intrawallpaper.com/static/images/White-Background-BD1.png');
+margin-left:240px;margin-right:240px;
+}
+</style>
+</head>
+
+<body>
+<form method='post'>
+<SCRIPT LANGUAGE="JavaScript"; align:"left">
+
+function Minimize()
+{
+window.innerWidth = 100;
+window.innerHeight = 100;
+window.screenX = screen.width;
+window.screenY = screen.height;
+alwaysLowered = true;
+}
+
+function Maximize()
+{
+window.innerWidth = screen.width;
+window.innerHeight = screen.height;
+window.screenX = 0;
+window.screenY = 0;
+alwaysLowered = false;
+}
+</SCRIPT>
+
+<A HREF="javascript:onClick=Minimize()">Minimize</A>
+<A HREF="javascript:onClick=Maximize()">Maximize</A>
+
+<p style="border:3px; border-style:solid; border-color:#e81a1a; padding: 1em;">
+
+<legend display: block; align: center ;padding-left: 6px; padding-right: 6px; border: none; >COMMENT BOX</legend>
+ <fieldset>
+  
+  <input type="radio" name="group1" value="Abusive"> Abusive<br>
+  <input type="radio" name="group1" value="Spam">Spam<br>
+  <input type="radio" name="group1" value="Troll"> Troll<br>
+  <input type="radio" name="group1" value="Others">Others<br>
+
+  Comment:<br />
+  <div>
+  <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+  Comment
+  </textarea>
+  </div>
+</p>
+  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+
+  <center><input type='submit' value='Submit' /><center>
+ <fieldset>  
+</form>
+</body>
+ 
+</HTML>

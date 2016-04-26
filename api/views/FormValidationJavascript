@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+
+   </head>
+   <title>Forum</title>
+<body>
+<style>
+	.sidenav {
+		padding-top:20px;
+		background-color: #555;
+		height:100%;
+	}
+	.row.content{
+		height:450px;
+	
+    }
+    nav {
+    	margin-top:0;
+    	border-radius:100%;
+    	
+    }
+    .form-control {
+    	width:300px;
+    	
+
+    }
+    .modal-dailog {
+    	padding-top:10px;
+    	border-radius:0;
+    	
+    }
+	.nav-stacked a:hover {
+		background-color:yellow;
+		font-family:Tahoma;
+
+
+	}
+	body {
+		background:url("http://www.codebook.in/dist/img/background.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	.footer p {
+        font-family: 'Raleway', sans-serif;
+        font-size: 15px;
+      }
+      
+      footer {
+      background-color: black;
+      color: white;
+      padding: 15px;
+      box-shadow:0 0 64px rgba(0,0,0,255);
+	
+	}
+	.panel-info {
+		box-shadow:0 0 64px rgba(0,0,0,255);
+	}
+	.input-danger{
+		border-color: #66512c;
+  		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #c0a16b;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #c0a16b;
+	}
+	</style>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<a href="#" class="navbar-brand" style="font-size:30px;font-family:font-family: 'Raleway', sans-serif">Forums</a>
+		</div>
+	<form class="navbar-form navbar-left">
+		<div class="input-group">
+		<input type="text" placeholder="Search" class="form-control">
+		<span class="input-group-addon">
+		<span class="glyphicon glyphicon-search"></span>
+		</span>
+		</div>
+		<button class="btn btn-default navbar-btn" style="font-family:font-family: 'Raleway',sans-serif">Search</button>
+		</form>
+		<button class="navbar-btn btn btn-success navbar-right btn-sm" data-toggle="modal" href="#mymodal" style="margin-right:50px ;font-family: 'Raleway', sans-serif">Login</button>
+			<div class="modal fade" id="mymodal">
+				<div class="modal-dailog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title" style="font-family: 'Raleway', sans-serif ; text-align:center">Sign Up</h1>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							
+							</div>
+						<div class="modal-body">
+						
+						
+							<div class="form-group" >
+								<form class="form-horizontal" name="form2">
+								<h2 style="font-family: 'Raleway', sans-serif">Already a Member?</h2>
+								<label style="font-family: 'Raleway', sans-serif">VIT Email</label>
+									<input  class="form-control" type="email" name="mail" placeholder="Email" style="font-family: 'Raleway', sans-serif"  onfocus="Focus(this)" onblur="OffFocus(this)" required><br>
+								<label style="font-family: 'Raleway', sans-serif"> Password</label>
+								<input  class="form-control" type="password" placeholder="password" style="font-family: 'Raleway', sans-serif"  onfocus="Focus(this)" onblur="OffFocus(this)" required><br>
+								<label style="font-family: 'Raleway', sans-serif">Remember Me</label> <input type="checkbox">
+									<p style="font-family: 'Raleway', sans-serif"><a href="#"><i> Forgot Your Password ?</i></a></p>
+									<button class="btn btn-default" type="submit" style="font-family: 'Raleway', sans-serif" onclick="ValidateEmail(document.form2.mail)">Login</button>
+								</form>
+								
+								</div>
+								
+
+								<div class="col-sm-2" style="border-right:1px solid black" ></div>
+								<div class="row">
+									<div class="col-sm-8" >
+								<div  class="pull-right" style="margin-top:-300px">
+								<div class="form-group">	
+								<h3 style="font-family: 'Raleway', sans-serif"><b>New Member ?</b></h3>
+								<br>
+								<br>
+								
+								<form class="form-horizontal" name="form1" style="margin-top:-10px ;margin-right:10px">
+								<label style="font-family: 'Raleway', sans-serif" >VIT Email</label>	
+								<input class="form-control" type="email" id="email" name="email" placeholder="Email" onfocus="Focus(this)" onblur="OffFocus(this)" required><br>
+								<label style="font-family: 'Raleway', sans-serif">Username</label>
+								<input style="font-family: 'Raleway', sans-serif" type="text" placeholder="Username" class="form-control" id="uname" name="uname" onfocus="Focus(this)" onblur="OffFocus(this)" required><br>
+								<label style="font-family: 'Raleway', sans-serif">Registration number</label>
+								<input style="font-family: 'Raleway', sans-serif" type="text" placeholder="Registration number" class="form-control" id="regno" name="regno" onfocus="Focus(this)" onblur="OffFocus(this)" required><br>
+								<label style="font-family: 'Raleway', sans-serif">Select Your Branch</label>
+								<br>
+								<select class="form-control" required>
+									
+									<option style="font-family: 'Raleway', sans-serif">BIT</option>
+									<option style="font-family: 'Raleway', sans-serif">BME</option>
+									<option style="font-family: 'Raleway', sans-serif">BBT</option>				
+									<option style="font-family: 'Raleway', sans-serif">BEC</option>
+									<option style="font-family: 'Raleway', sans-serif">BEE</option>
+									<option style="font-family: 'Raleway', sans-serif">BCL</option>
+									<option style="font-family: 'Raleway', sans-serif">BMA</option>
+									<option style="font-family: 'Raleway', sans-serif">BCL</option>
+									<option style="font-family: 'Raleway', sans-serif">BBA</option>
+									<option style="font-family: 'Raleway', sans-serif">BCE</option>
+									<option style="font-family: 'Raleway', sans-serif">BCB</option>
+
+								</select>
+								<br>
+								<label style="font-family: 'Raleway', sans-serif">Password</label>
+								<br>
+								<input type="password" class="form-control" placeholder="Password" name="pass" onfocus="Focus(this)" onblur="OffFocus(this)" required><br>
+								<label style="font-family: 'Raleway', sans-serif">Confirm Password</label>
+								<br>
+								<input type="password" class="form-control" placeholder="Password" name="c_pass" onfocus="Focus(this)" onblur="OffFocus(this)" required><br>
+								<button class="btn btn-info" type="submit" style="font-family: 'Raleway', sans-serif" onclick=" ValidateEmail(document.form1.email);ValidateUname(document.form1.uname);ValidateRegno(document.form1.regno);ValidatePass(document.form1.pass,document.form1.c_pass);">Sign Up</button>
+								</form>
+								</div>
+								</div>
+								</div>
+								</div>
+
+							
+								
+								</div>
+								</div>
+
+
+		</nav>
+<div class="row content">
+	<div class="col-sm-2 sidenav">
+		<ul class="nav nav-pills nav-stacked">
+			<li><a href="#" style="font-family: 'Raleway', sans-serif,font-size:10px">  Profile   <span class="glyphicon glyphicon-user"></span></a></li><hr>
+			<li><a href="#" style="font-family: 'Raleway', sans-serif">Projects <span class="badge">New</span></a></li><hr>
+			<li><a href="#" style="font-family: 'Raleway', sans-serif">Forums </a></li>
+			</ul>
+			</div>
+
+
+<div class="col-md-8 left-text">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h3><a href="#" style="font-family: 'Raleway', sans-serif">Recent Topics</a></h3>
+			</div>
+			<div class="panel-body">
+				<div class="list-group">
+				<a class="list-group-item" data-toggle="collapse" href="#mycollapse" style="font-family: 'Raleway', sans-serif">Website disclaimer for simple online game <span class="glyphicon glyphicon-chevron-right"></span></a>
+				<div class="panel-collapse collapsing" id="mycollapse">
+					<div class="list-group">
+						<a class="list-group-item">General : <br>
+						<div class="jumbotron">
+					<p class="list-group-item-text" style="font-family: 'Raleway', sans-serif;font-size:25px"> Gaming as we all know is loved by everyone so we have included a new<br>
+					Programme which includes gaming tutorials using Java online.<br>
+					Its New Technology and is userfriendly.</p> </a> </div>
+					</div>
+					</div>
+				
+				<a href="#" class="list-group-item" style="font-family: 'Raleway', sans-serif"> How to configure mobile friendly page <span class="glyphicon glyphicon-chevron-right"></span></a>
+				
+				<a href="#" class="list-group-item active" style="font-family: 'Raleway', sans-serif"> Suggestions<span class="badge">New</span>
+				<p class="list-group-item-text" style="font-family: 'Raleway', sans-serif">How can we improve</p>
+				</a>
+				
+				</div>
+				</div>
+				</div>
+				</div>
+
+				<div class="col-md-8 right-text">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3><a href="#" style="font-family: 'Raleway', sans-serif">BRANCH</a>
+						</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-8">
+									<div class="list-group">
+										<a href="#" class="list-group-item" style="font-family: 'Raleway', sans-serif">IT-Information Technology: Forums</a>
+										<a href="#" class="list-group-item" style="font-family: 'Raleway', sans-serif">CSE-:Computer Scisence Forums</a>
+										<a href="#" class="list-group-item" style="font-family: 'Raleway', sans-serif">BME- Mechanical Forums</a>
+										</div>
+										</div>
+										</div>
+										</div>
+
+										</panel>
+										</div>
+<div class="col-md-20">
+<div class="footer">
+<div  style="width:100%">
+<footer class="container-fluid text-center"> <p style="text-align:center"><span class="glyphicon glyphicon-copyright-mark"></span> Copyrights: Anish Singh Walia</p> 
+</footer>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 		
+ 
+
+<script type="text/javascript">
+function Focus(x)
+{
+	x.style.borderColor="#66afe9";
+	document.getElementById(x).style.boxShadow="inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6)"
+	return true;
+
+}
+function OffFocus(x)
+{
+	x.style.borderColor="#ccc";
+	document.getElementById(x).style.boxShadow="none";
+}
+function ValidateEmail(inputText)  
+{  
+var mailformat = /([a-z])+.(([a-z])+)?201[0-9]{1}@vit.ac.in/i;  
+if(inputText.value.match(mailformat))  
+{   
+return true;  
+}  
+else  
+{  
+alert("You have entered an invalid email address! Enter VIT Email ONLY");  
+inputText.style.borderColor="red";
+inputText.style.boxShadow="inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #c0a16b";
+return false;  
+}  
+}  
+
+function ValidateRegno(inputText)  
+{  
+var regnoformat = /1[0-9][A-Z]{3}[0-9]{4}/i;  
+if(inputText.value.match(regnoformat))  
+{   
+return true;  
+}  
+else  
+{  
+alert("You have entered an invalid reg no!");  
+inputText.style.borderColor="red";
+inputText.style.boxShadow="inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #c0a16b"; 
+
+return false;  
+}  
+}  
+function ValidateUname(inputText)  
+{  
+var unameformat = /[a-z_.0-9]{6,}/i;  
+if(inputText.value.match(unameformat))  
+{   
+return true;  
+}  
+else  
+{  
+alert("You have entered an invalid username! It can contain alphabets, digits, dot or underscore and should be of minimum 6 characters.");  
+inputText.style.borderColor="red";
+inputText.style.boxShadow="inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #c0a16b"; 
+return false;  
+}  
+}  
+function ValidatePass(x,y){
+	if(x.value.match(y))
+		{return true;}
+	else{alert("Passwords Mismatch!")}
+}
+</script>
+</body>
+
+</html>
