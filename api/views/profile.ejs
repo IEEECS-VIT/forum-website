@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Forum | Profile</title>
+    </head>
+    <body>
+        <dl>
+            <dt>Name</dt>
+            <dd><%=name%></dd>
+            <br>
+            <dt>Username</dt>
+            <dd><%=username%></dd>
+            <br>
+            <dt>Registraion Number</dt>
+            <dd><%=reg%></dd>
+            <br>
+            <dt>Email</dt>
+            <dd><%=email%></dd>
+            <br>
+            <dt>Last Active</dt>
+            <dd><%=lastActive%></dd>
+            <br>
+            <dt>Threads</dt>
+            <dd>
+                <ul>
+                    <%  for(var i=0;i<threadsActive.length; i++){ %>
+                        <li><%= threadsActive[i]  %></li>
+                    <%  }   %>
+                </ul>
+            </dd>
+            <br>
+            <dt>Date of Birth</dt>
+            <dd><%=dOB%></dd>
+            <br>
+            <dt>Date of Joining</dt>
+            <dd><%=dOJ%></dd>
+            <br>
+            <dt>Moderating</dt>
+            <dd><%= isModerator ? "Yes" : "No"  %></dd>
+            <%if(isModerator){%>
+                <dt>Moderating Threads</dt>
+                <dd>
+                    <ul>
+                        <%  for(var i=0;i<moderating.length; i++){ %>
+                            <li><%= moderating[i]  %></li>
+                        <%  }   %>
+                    </ul>
+                </dd>
+            <%}%>
+
+        </dl>
+    </body>
+</html>
